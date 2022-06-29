@@ -1,0 +1,56 @@
+<!-- <form>
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-lg-6 col-xl-5 col-md-9 mx-auto">
+        <div class="card mt-4">
+          <div class="card-header bg-dark text-white">
+            <h3 class="text-center">Welcome User</h3>
+          </div>
+          <div class="card-body">
+            <div class="form-group form-row">
+              <label for="UserName" class="col-md-4 col-form-label">Username</label>
+              <div class="col-md-8">
+                <input type="text" class="form-control" placeholder="Username" name="UserName" [(ngModel)]="login.userName"  autofocus="autofocus">
+              </div>
+            </div>
+  
+            <div class="form-group form-row">
+              <label for="Password" class="col-md-4 col-form-label">Password</label>
+              <div class="col-md-8">
+                <input type="password" class="form-control" placeholder="Password"name="Password" [(ngModel)]="login.password" >
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="card-footer">
+            <div>
+                <span class="float-right"><button (click)="onLogin()" class="btn btn-primary">Login</button></span>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </form> -->
+
+  <div id="wrapper">
+    <div id="left">
+      <div id="signin">
+        <div class="logo">
+          <img src="assets/username.webp" alt="Sluralpright" />
+          <div><h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><b> Welcome User</b></h4></div>
+         </div>
+         <form>
+           <div>
+            <label>User Name</label>
+            <input type="text" class="text-input" />
+           </div>
+           <div>
+             <label>Password</label>
+             <input type="password" class="text-input" />
+           </div>
+            <button type="submit" class="primary-btn" (click)="onLogin()">Login</button>
+          </form>
+      </div>
+    </div>
+</div>

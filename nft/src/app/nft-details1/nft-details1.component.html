@@ -1,0 +1,65 @@
+<h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center">NFT ISSSUE</h1>
+<!-- <div class="row mt-1 mb-2 mt-5" >
+    <div class="col-lg-4 mb-1">
+        <div class="card" *ngFor="let nfts of nfts ">
+            <div class="card-header">
+                <div class="card-title">
+                    <h4>{{nfts.nftOwner}}</h4>
+                </div>
+            </div>
+            <div class="cardy-body" style="margin-left:10px ; margin-top:20px ;">
+                <div class="container-fluid">
+                    <h5>First Name: <span class="float-right">{{nfts.fName}}</span></h5>
+                    <h5>Last Name: <span class="float-right">{{nfts.lName}}</span></h5>
+                    <h5>Course Name: <span class="float-right">{{nfts.circleName}}</span></h5>
+                    <h5>NFT ID: <span class="float-right">{{nfts.nftId}}</span></h5>
+                    <h5>NFT URL: <span class="float-right">{{nfts.nftURL}}</span></h5>
+                </div>
+            </div>
+            <div class="card-footer"> 
+                <div class="btn btn-primary float-right">
+                    <a style="color: white;" (click)="back()">Back</a>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="col-xl-12 mx-auto">
+    <div class="row">
+        <div class="col-8 mx-auto mt-5">
+            <table class="table">
+              <thead>
+                <th>Nft Owner</th>
+                <th>First Name</th>
+                <th>Last of Start</th>
+                <th>Circle Name</th>
+                <th>NFT ID</th>
+                <th>NFT Url</th>
+                <!-- <th>Action</th> -->
+              </thead>
+              <tbody>
+                <tr *ngFor="let nfts of nfts; let i = index">
+                  <td>{{ nfts.nftOwner }}</td>
+                  <td>{{ nfts.fName }}</td>
+                  <td>{{ nfts.lName }}</td>
+                  <td>{{ nfts.circleName }}</td>
+                  <td>{{ nfts.nftId }}</td>
+                  <td>{{ nfts.nftURL }}</td>
+                  <!-- <td>
+                    <button
+                      class="btn btn-info"
+                      (click)="onViewClick($event, i)"
+                      data-toggle="modal"
+                      data-target="#viewModal"
+                    >
+                      View More
+                    </button>
+                  </td> -->
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+
+<div class="btn btn-warning"  (click)="back()">Back</div>

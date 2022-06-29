@@ -1,0 +1,422 @@
+<h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center">NFTs</h1>
+<div class="col-xl-12 mx-auto">
+    <div class="row">
+        <!-- <div class="col-md-4" *ngFor="let nfts of nfts; let i = index">
+            <div class="card card-primary">
+                <div class="card-header text-center">
+                    <h5>{{nfts.nftOwner}}</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>First Name:</th>
+                            <td>{{nfts.fName}}</td>
+                        </tr>
+                        <tr>
+                            <th>Last Name:</th>
+                            <td>{{nfts.lName}}</td>
+                        </tr>
+                        <tr>
+                            <th>Course Name:</th>
+                            <td>{{nfts.courseName}}</td>
+                        </tr>
+                        <tr>
+                            <th>NFT ID:</th>
+                            <td>{{nfts.nftId}}</td>
+                        </tr>
+                        <tr>
+                            <th>NFT URl:</th>
+                            <td>{{nfts.nftURL}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-info" data-toggle="modal" data-target="#viewModal" (click)="onViewClick($event, i)">View More</button>&nbsp;    
+                </div>
+            </div>
+        </div> -->
+        <div class="col-8 mx-auto mt-5">
+            <table class="table">
+              <thead>
+                <th>Nft Owner</th>
+                <th>First Name</th>
+                <th>Last of Start</th>
+                <th>Course Name</th>
+                <th>NFT ID</th>
+                <th>NFT Url</th>
+                <th>Action</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let nfts of nfts; let i = index">
+                  <td>{{ nfts.nftOwner }}</td>
+                  <td>{{ nfts.fName }}</td>
+                  <td>{{ nfts.lName }}</td>
+                  <td>{{ nfts.circleName }}</td>
+                  <td>{{ nfts.nftId }}</td>
+                  <td>{{ nfts.nftURL }}</td>
+                  <td>
+                    <button
+                      class="btn btn-info"
+                      (click)="onViewClick($event, i)"
+                      data-toggle="modal"
+                      data-target="#viewModal"
+                    >
+                      View More
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+
+<form>
+    <div class="modal" role="dialog" id="viewModal">
+      <div class="modal-dialog">
+        <div class="modal-content" style="width: 700px">
+          <div class="modal-header bg-primary">
+            <div class="modal-title" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: large;">VIEW NFT</div>
+            <button type="button" class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row">
+              <label for="txtViewNftaeskey" class="col-sm-4 col-form-label"
+                >aesKey</label
+              >
+              <div class="col-sm-8">
+                <input
+                  type="text"
+                  id="txtViewNftaeskey"
+                  style="width: 300px"
+                  class="form-control-plain-text"
+                  placeholder="aesKey"
+                  name="aesKey"
+                  [(ngModel)]="viewNft.aesKey"
+                  disabled="disabled"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="txtViewNftcircleName" class="col-sm-4 col-form-label"
+                  >Circle Name</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftcircleName"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="circleName"
+                    name="circleName"
+                    [(ngModel)]="viewNft.circleName"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftdocType" class="col-sm-4 col-form-label"
+                  >docType</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftdocType"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="docType"
+                    name="docType"
+                    [(ngModel)]="viewNft.docType"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftemailId" class="col-sm-4 col-form-label"
+                  >Email ID</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftemailId"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="emailId"
+                    name="emailId"
+                    [(ngModel)]="viewNft.emailId"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftexpiryDate" class="col-sm-4 col-form-label"
+                  >Expiry Date</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftexpiryDate"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="expiryDate"
+                    name="expiryDate"
+                    [(ngModel)]="viewNft.expiryDate"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftfName" class="col-sm-4 col-form-label"
+                  >fName</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftfName"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="fName"
+                    name="fName"
+                    [(ngModel)]="viewNft.fName"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftitemCpyNum" class="col-sm-4 col-form-label"
+                  >itemCpyNum</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftitemCpyNum"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="itemCpyNum"
+                    name="itemCpyNum"
+                    [(ngModel)]="viewNft.itemCpyNum"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftitemID" class="col-sm-4 col-form-label"
+                  >itemID</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftitemID"
+                    style="width: 400px"
+                    class="form-control-plain-text"
+                    placeholder="itemID"
+                    name="itemID"
+                    [(ngModel)]="viewNft.itemID"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftlName" class="col-sm-4 col-form-label"
+                  >lName</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftlName"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="lName"
+                    name="lName"
+                    [(ngModel)]="viewNft.lName"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftmasteryLevel" class="col-sm-4 col-form-label"
+                  >Mastery Level</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftlmasteryLevel"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="masteryLevel"
+                    name="masteryLevel"
+                    [(ngModel)]="viewNft.masteryLevel"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftname" class="col-sm-4 col-form-label"
+                  >name</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftname"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="name"
+                    name="name"
+                    [(ngModel)]="viewNft.name"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftnftId" class="col-sm-4 col-form-label"
+                  >NFT ID</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftnftId"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="nftId"
+                    name="nftId"
+                    [(ngModel)]="viewNft.nftId"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftnftOwner" class="col-sm-4 col-form-label"
+                  >nftOwner</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftnftOwner"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="nftOwner"
+                    name="nftOwner"
+                    [(ngModel)]="viewNft.nftOwner"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftnftStatus" class="col-sm-4 col-form-label"
+                  >nftStatus</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftnftStatus"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="nftStatus"
+                    name="nftStatus"
+                    [(ngModel)]="viewNft.nftStatus"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftnftURL" class="col-sm-4 col-form-label"
+                  >nftURL</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftnftURL"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="nftURL"
+                    name="nftURL"
+                    [(ngModel)]="viewNft.nftURL"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftowner" class="col-sm-4 col-form-label"
+                  >owner</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftowner"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="owner"
+                    name="owner"
+                    [(ngModel)]="viewNft.owner"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftprice" class="col-sm-4 col-form-label"
+                  >price</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftprice"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="price"
+                    name="price"
+                    [(ngModel)]="viewNft.price"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNftsymbol" class="col-sm-4 col-form-label"
+                  >symbol</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftsymbol"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="symbol"
+                    name="symbol"
+                    [(ngModel)]="viewNft.symbol"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNfttimeStamp" class="col-sm-4 col-form-label"
+                  >timeStamp</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNfttimeStamp"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="timeStamp"
+                    name="timeStamp"
+                    [(ngModel)]="viewNft.timeStamp"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-warning" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+
+
+<div class="mt-5">
+    <button class="btn btn-warning" (click)="back()">Back</button>
+</div>

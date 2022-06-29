@@ -1,0 +1,95 @@
+<div class="row" style="margin-top:100px ;">
+    <div class="col-md-8 col-xl-6 mx-auto ">
+        <form [formGroup]="issueNftFrom">
+            <div class="card mt-1">
+                <div class="card-header text-center bg-success text-white">
+                    <h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Issue NFT</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group form-row">
+                        <label for="userName" class="col-md-4 col-form-label">User Name:</label>
+                        <div class="col-md-8">
+                            <input type="text" name="userName" id="userName" placeholder="User Name" class="form-control" formControlName="userName" [ngClass]="{
+                            'is-invalid': issueNftFrom.get('userName').invalid && (issueNftFrom.get('userName').dirty || issueNftFrom.get('userName').touched || issueNftFrom.submitted),
+                            'is-valid': issueNftFrom.get('userName').valid && (issueNftFrom.get('userName').dirty || issueNftFrom.get('userName').touched || issueNftFrom.submitted) }">
+                            <span class="text-danger" *ngIf="issueNftFrom.get('userName').invalid && (issueNftFrom.get('userName').dirty || issueNftFrom.get('userName').touched || issueNftFrom.submitted) && issueNftFrom.get('userName').errors?.required">User name can't be blank</span>
+                        </div>
+                    </div>
+  
+                    <div class="form-group form-row">
+                        <label for="fName" class="col-md-4 col-form-label">First Name:</label>
+                        <div class="col-md-8">
+                            <input type="text" name="fName" id="lName" placeholder="First Name" class="form-control" formControlName="fName" [ngClass]="{
+                            'is-invalid': issueNftFrom.get('fName').invalid && (issueNftFrom.get('fName').dirty || issueNftFrom.get('fName').touched || issueNftFrom.submitted),
+                            'is-valid': issueNftFrom.get('fName').valid && (issueNftFrom.get('fName').dirty || issueNftFrom.get('fName').touched || issueNftFrom.submitted) }">
+                            <span class="text-danger" *ngIf="issueNftFrom.get('fName').invalid && (issueNftFrom.get('fName').dirty || issueNftFrom.get('fName').touched || issueNftFrom.submitted) && issueNftFrom.get('fName').errors?.required">First name can't be blank</span>
+                        </div>
+                    </div>
+  
+                    <div class="form-group form-row">
+                        <label for="lName" class="col-md-4 col-form-label">Last Name:</label>
+                        <div class="col-md-8">
+                            <input type="text" name="lName" id="lName" placeholder="Last Name" class="form-control" formControlName="lName" [ngClass]="{
+                            'is-invalid': issueNftFrom.get('lName').invalid && (issueNftFrom.get('lName').dirty || issueNftFrom.get('lName').touched || issueNftFrom.submitted),
+                            'is-valid': issueNftFrom.get('lName').valid && (issueNftFrom.get('lName').dirty || issueNftFrom.get('lName').touched || issueNftFrom.submitted) }">
+                            <span class="text-danger" *ngIf="issueNftFrom.get('lName').invalid && (issueNftFrom.get('lName').dirty || issueNftFrom.get('lName').touched || issueNftFrom.submitted) && issueNftFrom.get('lName').errors?.required">Last name can't be blank</span>
+                        </div>
+                    </div>
+  
+                    <div class="form-group form-row">
+                        <label for="circleName" class="col-md-4 col-form-label">circle Name :</label>
+                        <div class="col-md-8">
+                            <input type="text" name="circleName" id="circleName" placeholder="circle Name" class="form-control" formControlName="circleName" [ngClass]="{
+                            'is-invalid': issueNftFrom.get('circleName').invalid && (issueNftFrom.get('circleName').dirty || issueNftFrom.get('circleName').touched || issueNftFrom.submitted),
+                            'is-valid': issueNftFrom.get('circleName').valid && (issueNftFrom.get('circleName').dirty || issueNftFrom.get('circleName').touched || issueNftFrom.submitted) }">
+                            <span class="text-danger" *ngIf="issueNftFrom.get('circleName').invalid && (issueNftFrom.get('circleName').dirty || issueNftFrom.get('circleName').touched || issueNftFrom.submitted) && issueNftFrom.get('circleName').errors?.required">Course name can't be blank</span>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group form-row">
+                        <label for="masteryLevel" class="col-md-4 col-form-label">mastery Level :</label>
+                        <div class="col-md-8">
+                            <input type="text" name="masteryLevel" id="masteryLevel" placeholder="masteryLevel" class="form-control" formControlName="masteryLevel" [ngClass]="{
+                            'is-invalid': issueNftFrom.get('masteryLevel').invalid && (issueNftFrom.get('masteryLevel').dirty || issueNftFrom.get('masteryLevel').touched || issueNftFrom.submitted),
+                            'is-valid': issueNftFrom.get('masteryLevel').valid && (issueNftFrom.get('masteryLevel').dirty || issueNftFrom.get('masteryLevel').touched || issueNftFrom.submitted) }">
+                            <span class="text-danger" *ngIf="issueNftFrom.get('masteryLevel').invalid && (issueNftFrom.get('masteryLevel').dirty || issueNftFrom.get('masteryLevel').touched || issueNftFrom.submitted) && issueNftFrom.get('masteryLevel').errors?.required">Course name can't be blank</span>
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <label for="expiryDate" class="col-md-4 col-form-label">Expiry Date :</label>
+                        <div class="col-md-8">
+                            <input type="date" name="expiryDate" id="expiryDate" placeholder="Expiry Date" class="form-control" formControlName="expiryDate" [ngClass]="{
+                            'is-invalid': issueNftFrom.get('expiryDate').invalid && (issueNftFrom.get('expiryDate').dirty || issueNftFrom.get('expiryDate').touched || issueNftFrom.submitted),
+                            'is-valid': issueNftFrom.get('expiryDate').valid && (issueNftFrom.get('expiryDate').dirty || issueNftFrom.get('expiryDate').touched || issueNftFrom.submitted) }">
+                            <span class="text-danger" *ngIf="issueNftFrom.get('expiryDate').invalid && (issueNftFrom.get('expiryDate').dirty || issueNftFrom.get('expiryDate').touched || issueNftFrom.submitted) && issueNftFrom.get('expiryDate').errors?.required">Course name can't be blank</span>
+                        </div>
+                    </div>
+                    <div class="form-group form-row">
+                        <label for="emailId" class="col-md-4 col-form-label">Email ID :</label>
+                        <div class="col-md-8">
+                            <input type="text" name="emailId" id="emailId" placeholder="email Id" class="form-control" formControlName="emailId" [ngClass]="{
+                            'is-invalid': issueNftFrom.get('emailId').invalid && (issueNftFrom.get('emailId').dirty || issueNftFrom.get('emailId').touched || issueNftFrom.submitted),
+                            'is-valid': issueNftFrom.get('emailId').valid && (issueNftFrom.get('emailId').dirty || issueNftFrom.get('emailId').touched || issueNftFrom.submitted) }">
+                            <span class="text-danger" *ngIf="issueNftFrom.get('emailId').invalid && (issueNftFrom.get('emailId').dirty || issueNftFrom.get('emailId').touched || issueNftFrom.submitted) && issueNftFrom.get('emailId').errors?.required">Course name can't be blank</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-row">
+                        <label for="url" class="col-md-4 col-form-label">URL:</label>
+                        <div class="col-md-8">
+                            <input type="text" name="url" id="url" placeholder="URL" class="form-control" formControlName="url" [ngClass]="{
+                            'is-invalid': issueNftFrom.get('url').invalid && (issueNftFrom.get('url').dirty || issueNftFrom.get('url').touched || issueNftFrom.submitted),
+                            'is-valid': issueNftFrom.get('url').valid && (issueNftFrom.get('url').dirty || issueNftFrom.get('url').touched || issueNftFrom.submitted) }">
+                            <span class="text-danger" *ngIf="issueNftFrom.get('url').invalid && (issueNftFrom.get('url').dirty || issueNftFrom.get('url').touched || issueNftFrom.submitted) && issueNftFrom.get('url').errors?.required">URL can't be blank</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-success float-right" (click)="onIssueNftClick($event)" >Issue NFT</button>
+                </div>
+            </div>
+             
+      </form>
+    </div>
+  </div>
