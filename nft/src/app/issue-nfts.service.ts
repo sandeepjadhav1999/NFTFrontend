@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { IssueNfts } from './issue-nfts';
 
 @Injectable({
@@ -24,4 +24,10 @@ export class IssueNftService {
   {
     return this.httpClient.get<IssueNfts>(this.urlPrefix+"/nft/retrieveAllNFTSForUser/"+firstName,{responseType:"json"})
   }
+  validateNft(newProject: IssueNfts): Observable<IssueNfts>
+  {
+    return this.httpClient.post<IssueNfts>(this.urlPrefix + "/nft/validateNFT", newProject)
+    
+  }
+  
 }

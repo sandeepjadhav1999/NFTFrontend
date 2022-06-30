@@ -33,7 +33,7 @@
     </div>
   </form> -->
 
-  <div id="wrapper">
+<div id="wrapper">
     <div id="left">
       <div id="signin">
         <div class="logo">
@@ -43,13 +43,14 @@
          <form>
            <div>
             <label>User Name</label>
-            <input type="text" class="text-input" />
+            <input type="text" placeholder="User Name" name="userName" class="text-input" [(ngModel)]="login.userName"/>
            </div>
            <div>
              <label>Password</label>
-             <input type="password" class="text-input" />
+             <input type="password" placeholder="Password" class="text-input" name="password"  [(ngModel)]="login.password" />
            </div>
             <button type="submit" class="primary-btn" (click)="onLogin()">Login</button>
+            <button type="submit" class="secondary-btn" (click)="onBack()">Back</button>
           </form>
       </div>
     </div>

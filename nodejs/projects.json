@@ -1,0 +1,21 @@
+{"nft":[{"nfts":[
+    {"aesKey": "aesKey",
+        "circleName": "Blockchain",
+        "docType": "NFT",
+        "emailId": "sumayya@abc.com",
+        "expiryDate": "2022-06-30",
+        "fName": "Sumayya",
+        "itemCpyNum": "1",
+        "itemID": "e160b462-766c-4337-b2db-88fadf90b129",
+        "lName": "Jamadar",
+        "masteryLevel": "Master",
+        "name": "CIRCLE NFT",
+        "nftId": "aa31307bba2dcf2ee586",
+        "nftOwner": "Sumayya",
+        "nftStatus": "ISSUED",
+        "nftURL": "http://docs.ipfs.io.ipns.localhost:8080/reference/http/api/#getting-started",
+        "owner": "admin",
+        "price": "0",
+        "symbol": "CIRNFT",
+        "timeStamp": "2022-06-29 13:48:11" }
+]}]}

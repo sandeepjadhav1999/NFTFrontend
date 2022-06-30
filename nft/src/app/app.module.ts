@@ -14,6 +14,10 @@ import { AllNftComponent } from './all-nft/all-nft.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { UserLoginComponent } from './user-login/user-login.component';
+import { UserNftComponent } from './user-nft/user-nft.component';
+import { ExternalPageComponent } from './external-page/external-page.component';
+import { ExternalLoginComponent } from './external-login/external-login.component';
+import { ValidateNftComponent } from './validate-nft/validate-nft.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { UserLoginComponent } from './user-login/user-login.component';
     AllNftComponent,
     AdminPageComponent,
     UserPageComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    UserNftComponent,
+    ExternalPageComponent,
+    ExternalLoginComponent,
+    ValidateNftComponent
   ],
   imports: [
     BrowserModule,

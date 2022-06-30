@@ -16,7 +16,12 @@ export class UserLoginComponent implements OnInit {
   }
 
   onLogin(){
+    console.log(this.login.userName)
+    sessionStorage.setItem('userName',this.login.userName)
     this.route.navigate(['/','user','userOperation'])
   }
 
+  onBack(){
+    this.route.navigate(['/','home'])
+  }
 }

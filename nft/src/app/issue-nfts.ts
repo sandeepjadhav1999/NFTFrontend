@@ -18,6 +18,7 @@ export class IssueNfts {
     price:any
     symbol: any
     timeStamp:any
+    result:any
     constructor(){
         this.aesKey=null
         this.circleName=null
@@ -38,5 +39,6 @@ export class IssueNfts {
         this.price=null
         this.symbol=null
         this.timeStamp=null   
+        this.result=null
     }
 }

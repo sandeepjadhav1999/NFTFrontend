@@ -23,9 +23,6 @@ export class IssueNftComponent implements OnInit {
       expiryDate:new FormControl(null, [ Validators.required ]),
       emailId: new FormControl(null, [ Validators.required ]),
       url: new FormControl(null, [ Validators.required ]),
-      
-      
-
     });    
   }
 

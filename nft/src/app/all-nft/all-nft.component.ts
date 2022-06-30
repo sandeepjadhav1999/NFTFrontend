@@ -33,7 +33,7 @@ export class AllNftComponent implements OnInit {
     this.viewNft.circleName=this.nfts[index].circleName
     this.viewNft.docType=this.nfts[index].docType
     this.viewNft.emailId=this.nfts[index].emailId
-    this.viewNft.emailId=this.nfts[index].expiryDate
+    this.viewNft.expiryDate=this.nfts[index].expiryDate
     this.viewNft.fName=this.nfts[index].fName
     this.viewNft.itemCpyNum=this.nfts[index].itemCpyNum
     this.viewNft.itemID=this.nfts[index].itemID
