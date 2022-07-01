@@ -1,5 +1,5 @@
 .btn-primary{
-    width: 200px;
+    width: 250px;
     height: 50px;
     font-size: 20px;
     font-family: serif;
@@ -7,6 +7,9 @@
     float: centre;
 }
 .container {
+    position: absolute;
+    top: 8px;
+    right: 16px;
     background-position: absolute;
     background-color:transparent;
     float: centre;
@@ -16,6 +19,41 @@
     padding-right: 50px;
     width: 400px;
     height: 350px;
-    margin-top: 10%;
+    margin-top: 15%;
     border-radius: 30px;
 }
+
+#background-video {
+    border: solid 1px black;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+.top{
+    margin-top:10px ;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    color: white;
+    text-transform: uppercase; 
+    background-image: linear-gradient(to right, #00F260, #f79d00, #0575E6, #64f38c);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent; 
+    background-size: 300%;
+    background-position: -100%;  
+    animation: animatedText 3s infinite alternate-reverse;
+}
+
+@keyframes animatedText{
+    to{
+      background-position: 100%; 
+    }
+  }

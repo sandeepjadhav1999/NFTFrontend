@@ -1,4 +1,4 @@
-<h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center">NFTs</h1>
+<h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center mt-3">All NFTs Details</h1>
 <div class="col-xl-12 mx-auto">
     <div class="row">
         <!-- <div class="col-md-4" *ngFor="let nfts of nfts; let i = index">
@@ -36,15 +36,15 @@
             </div>
         </div> -->
         <div class="col-8 mx-auto mt-5">
-            <table class="table">
+            <table class="table ">
               <thead>
-                <th>Nft Owner</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Course Name</th>
-                <th>NFT ID</th>
-                <th>NFT Url</th>
-                <th>Action</th>
+                <th style="text-align: center ;">NFT Owner</th>
+                <th style="text-align: center ;">First Name</th>
+                <th style="text-align: center ;">Last Name</th>
+                <th style="text-align: center ;">Course Name</th>
+                <th style="text-align: center ;">NFT ID</th>
+                <th style="text-align: center ;">NFT URL</th>
+                <th style="text-align: center ;">Action</th>
               </thead>
               <tbody>
                 <tr *ngFor="let nfts of nfts; let i = index">
@@ -52,8 +52,9 @@
                   <td>{{ nfts.fName }}</td>
                   <td>{{ nfts.lName }}</td>
                   <td>{{ nfts.circleName }}</td>
+                  <td><a href="{{ nfts.nftURL }}" target="_blank" style="text-decoration: none; color: black;"><div class="change">{{ nfts.nftURL }}</div></a></td>
                   <td>{{ nfts.nftId }}</td>
-                  <td>{{ nfts.nftURL }}</td>
+                  
                   <td>
                     <button
                       class="btn btn-info"
@@ -118,7 +119,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftdocType" class="col-sm-4 col-form-label"
-                  >docType</label
+                  >DocType</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -169,7 +170,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftfName" class="col-sm-4 col-form-label"
-                  >fName</label
+                  >First Name</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -186,7 +187,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftitemCpyNum" class="col-sm-4 col-form-label"
-                  >itemCpyNum</label
+                  >Item Copy Number</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -203,13 +204,13 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftitemID" class="col-sm-4 col-form-label"
-                  >itemID</label
+                  >Item ID</label
                 >
                 <div class="col-sm-8">
                   <input
                     type="text"
                     id="txtViewNftitemID"
-                    style="width: 400px"
+                    style="width: 300px"
                     class="form-control-plain-text"
                     placeholder="itemID"
                     name="itemID"
@@ -220,7 +221,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftlName" class="col-sm-4 col-form-label"
-                  >lName</label
+                  >Last Name</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -254,7 +255,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftname" class="col-sm-4 col-form-label"
-                  >name</label
+                  >Purpose</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -288,7 +289,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftOwner" class="col-sm-4 col-form-label"
-                  >nftOwner</label
+                  >NFT Owner</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -305,7 +306,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftStatus" class="col-sm-4 col-form-label"
-                  >nftStatus</label
+                  >NFT Status</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -322,7 +323,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftURL" class="col-sm-4 col-form-label"
-                  >nftURL</label
+                  >NFT URL</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -339,7 +340,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftowner" class="col-sm-4 col-form-label"
-                  >owner</label
+                  >Issued By</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -356,7 +357,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftprice" class="col-sm-4 col-form-label"
-                  >price</label
+                  >Price</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -373,7 +374,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftsymbol" class="col-sm-4 col-form-label"
-                  >symbol</label
+                  >Symbol</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -390,7 +391,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNfttimeStamp" class="col-sm-4 col-form-label"
-                  >timeStamp</label
+                  >Timestamp</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -417,6 +418,6 @@
 
 
 
-<div class="mt-5">
-    <button class="btn btn-warning" (click)="back()">Back</button>
+<div class="mx-auto" style="width:200px; margin-top: 50px;">
+    <button class="btn btn-warning "(click)="back()" style="width:200px ;">Back</button>
 </div>

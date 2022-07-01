@@ -12,6 +12,7 @@ import { map } from 'rxjs/operators'
 export class NftDetails1Component implements OnInit {
   inftOwner:IssueNfts
   nfts:IssueNfts[]=[]
+  viewNft: IssueNfts = new IssueNfts();
   // nfts:IssueNfts=new IssueNfts()
 
   constructor(private issueNftService:IssueNftService,private route:Router,private activeRoute:ActivatedRoute) { }
@@ -36,7 +37,29 @@ export class NftDetails1Component implements OnInit {
   }
 
   back(){
-    this.route.navigate(['/','admin'])
+    this.route.navigate(['/','admin','adminoperation'])
+  }
+
+  onViewClick(event: any, index: number){
+    this.viewNft.aesKey=this.nfts[index].aesKey
+    this.viewNft.circleName=this.nfts[index].circleName
+    this.viewNft.docType=this.nfts[index].docType
+    this.viewNft.emailId=this.nfts[index].emailId
+    this.viewNft.expiryDate=this.nfts[index].expiryDate
+    this.viewNft.fName=this.nfts[index].fName
+    this.viewNft.itemCpyNum=this.nfts[index].itemCpyNum
+    this.viewNft.itemID=this.nfts[index].itemID
+    this.viewNft.lName=this.nfts[index].lName
+    this.viewNft.masteryLevel=this.nfts[index].masteryLevel
+    this.viewNft.name=this.nfts[index].name
+    this.viewNft.nftId=this.nfts[index].nftId
+    this.viewNft.nftOwner=this.nfts[index].nftOwner
+    this.viewNft.nftStatus=this.nfts[index].nftStatus
+    this.viewNft.nftURL=this.nfts[index].nftURL
+    this.viewNft.owner=this.nfts[index].owner
+    this.viewNft.price=this.nfts[index].price
+    this.viewNft.symbol=this.nfts[index].symbol
+    this.viewNft.timeStamp=this.nfts[index].timeStamp
   }
 
 }

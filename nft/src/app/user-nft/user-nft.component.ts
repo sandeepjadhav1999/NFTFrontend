@@ -24,6 +24,7 @@ export class UserNftComponent implements OnInit {
         this.nfts = this.nfts.concat(obj.nfts);
         console.log(this.nfts)
       });
+      console.log(response)
     });
   }
 

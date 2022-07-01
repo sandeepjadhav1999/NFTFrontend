@@ -21,7 +21,7 @@ export class ValidateNftComponent implements OnInit {
       lName: new FormControl(null, [ Validators.required ]),
       circleName: new FormControl(null, [ Validators.required ]),
       masteryLevel:new FormControl(null, [ Validators.required ]),
-      expiryDate:new FormControl(null, [ Validators.required ]),
+      // expiryDate:new FormControl(null, [ Validators.required ]),
       emailId: new FormControl(null, [ Validators.required ]),
       url: new FormControl(null, [ Validators.required ]),
       nftId:new FormControl(null, [ Validators.required ]),
@@ -39,7 +39,7 @@ export class ValidateNftComponent implements OnInit {
       this.issueNftService.validateNft(this.validateNft.value).subscribe((response) => {
         console.log(response.result)
         if (response.result == "valid"){
-          this.result= response.result
+          this.result = response.result
           this.validateNft.reset()
           this.validateNft.get('userName').clearValidators();
           this.validateNft.get('userName').updateValueAndValidity();
@@ -51,8 +51,8 @@ export class ValidateNftComponent implements OnInit {
           this.validateNft.get('circleName').updateValueAndValidity();
           this.validateNft.get('masteryLevel').clearValidators();
           this.validateNft.get('masteryLevel').updateValueAndValidity();
-          this.validateNft.get('expiryDate').clearValidators();
-          this.validateNft.get('expiryDate').updateValueAndValidity();
+          // this.validateNft.get('expiryDate').clearValidators();
+          // this.validateNft.get('expiryDate').updateValueAndValidity();
           this.validateNft.get('emailId').clearValidators();
           this.validateNft.get('emailId').updateValueAndValidity();
           this.validateNft.get('url').clearValidators();

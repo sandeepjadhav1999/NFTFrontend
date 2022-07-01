@@ -20,7 +20,7 @@ export class IssueNftComponent implements OnInit {
       lName: new FormControl(null, [ Validators.required ]),
       circleName: new FormControl(null, [ Validators.required ]),
       masteryLevel:new FormControl(null, [ Validators.required ]),
-      expiryDate:new FormControl(null, [ Validators.required ]),
+      // expiryDate:new FormControl(null, [ Validators.required ]),
       emailId: new FormControl(null, [ Validators.required ]),
       url: new FormControl(null, [ Validators.required ]),
     });    

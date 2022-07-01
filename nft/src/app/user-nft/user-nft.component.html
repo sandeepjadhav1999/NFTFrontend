@@ -3,25 +3,26 @@
     <div class="row">
         <div class="col-8 mx-auto mt-5">
             <table class="table">
-              <thead>
+              <thead style="text-align: center;">
                 <th>NFT ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>NFT Owner</th>
                 <th>Course Name</th>
-                <th>NFT Url</th>
+                <th>NFT URL</th>
               </thead>
               <tbody>
                 <tr *ngFor="let nfts of nfts; let i = index">
                     <td data-toggle="modal"
                     data-target="#viewModal"
                     (click)="onViewClick($event, i)"
+                    class="change"
                     >{{ nfts.nftId }}</td>
                 <td>{{ nfts.fName }}</td>
                 <td>{{ nfts.lName }}</td>
                 <td>{{ nfts.nftOwner }}</td>
                 <td>{{ nfts.circleName }}</td>  
-                <td><a href="{{ nfts.nftURL }}" target="_blank" style="color: black;">{{ nfts.nftURL }}</a></td>  
+                <td><a href="{{ nfts.nftURL }}" target="_blank" style="color: black; text-decoration: none;"><div class="change">{{ nfts.nftURL }}</div></a></td>  
                 </tr>
               </tbody>
             </table>
@@ -127,7 +128,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftfName" class="col-sm-4 col-form-label"
-                  >fName</label
+                  >First Name</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -144,7 +145,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftitemCpyNum" class="col-sm-4 col-form-label"
-                  >itemCpyNum</label
+                  >Item Copy Number</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -161,13 +162,13 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftitemID" class="col-sm-4 col-form-label"
-                  >itemID</label
+                  >Item ID</label
                 >
                 <div class="col-sm-8">
                   <input
                     type="text"
                     id="txtViewNftitemID"
-                    style="width: 400px"
+                    style="width: 300px"
                     class="form-control-plain-text"
                     placeholder="itemID"
                     name="itemID"
@@ -178,7 +179,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftlName" class="col-sm-4 col-form-label"
-                  >lName</label
+                  >Last Name</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -212,7 +213,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftname" class="col-sm-4 col-form-label"
-                  >name</label
+                  >Purpose</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -246,7 +247,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftOwner" class="col-sm-4 col-form-label"
-                  >nftOwner</label
+                  >NFT Owner</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -263,7 +264,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftStatus" class="col-sm-4 col-form-label"
-                  >nftStatus</label
+                  >NFT Status</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -280,7 +281,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftURL" class="col-sm-4 col-form-label"
-                  >nftURL</label
+                  >NFT URL</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -297,7 +298,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftowner" class="col-sm-4 col-form-label"
-                  >owner</label
+                  >Issued By</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -314,7 +315,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftprice" class="col-sm-4 col-form-label"
-                  >price</label
+                  >Price</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -331,7 +332,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftsymbol" class="col-sm-4 col-form-label"
-                  >symbol</label
+                  >Symbol</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -348,7 +349,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNfttimeStamp" class="col-sm-4 col-form-label"
-                  >timeStamp</label
+                  >Timestamp</label
                 >
                 <div class="col-sm-8">
                   <input

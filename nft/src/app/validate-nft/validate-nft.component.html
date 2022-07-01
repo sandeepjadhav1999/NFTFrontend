@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row mt-5">
     <div class="col-md-8 col-xl-6 mx-auto ">
         <form [formGroup]="validateNft">
             <div class="card mt-1">
                 <div class="card-header text-center bg-success text-white">
-                    <h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Issue NFT</h4>
+                    <h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Validate NFT</h4>
                 </div>
                 <div class="card-body">
                     <div class="form-group form-row">
@@ -56,7 +56,7 @@
                             <span class="text-danger" *ngIf="validateNft.get('masteryLevel').invalid && (validateNft.get('masteryLevel').dirty || validateNft.get('masteryLevel').touched || validateNft.submitted) && validateNft.get('masteryLevel').errors?.required">Mastery Level can't be blank</span>
                         </div>
                     </div>
-                    <div class="form-group form-row">
+                    <!-- <div class="form-group form-row">
                         <label for="expiryDate" class="col-md-4 col-form-label">Expiry Date :</label>
                         <div class="col-md-8">
                             <input type="date" name="expiryDate" id="expiryDate" placeholder="Expiry Date" class="form-control" formControlName="expiryDate" [ngClass]="{
@@ -64,7 +64,7 @@
                             'is-valid': validateNft.get('expiryDate').valid && (validateNft.get('expiryDate').dirty || validateNft.get('expiryDate').touched || validateNft.submitted) }">
                             <span class="text-danger" *ngIf="validateNft.get('expiryDate').invalid && (validateNft.get('expiryDate').dirty || validateNft.get('expiryDate').touched || validateNft.submitted) && validateNft.get('expiryDate').errors?.required">Expiry Date can't be blank</span>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="form-group form-row">
                         <label for="emailId" class="col-md-4 col-form-label">Email ID :</label>
                         <div class="col-md-8">
@@ -97,7 +97,7 @@
                 </div>
                 <div class="card-footer">
                     <button class="btn btn-success float-right" data-toggle="modal"
-                    data-target="#viewModal" (click)="onIssueNftClick($event)" >Issue NFT</button>
+                    data-target="#viewModal" (click)="onIssueNftClick($event)" >Validate NFT</button>
                 </div>
             </div>     
       </form>
@@ -111,7 +111,7 @@
       <div class="modal-dialog ">
         <div class="modal-content" style="width: 700px">
           <div class="modal-body">
-              <h1>is a {{result}} NFT</h1>
+              <h1>{{result}} NFT</h1>
           </div>
           <div class="modal-footer">
             <button class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -121,4 +121,6 @@
     </div>
   </form>
 
-<div class="btn btn-warning" (click)="onBack()">Back</div>
+<div class="mx-auto" style="width:200px; margin-top: 50px;">
+    <button class="btn btn-warning "(click)="onBack()" style="width:200px ;">Back</button>
+</div>
