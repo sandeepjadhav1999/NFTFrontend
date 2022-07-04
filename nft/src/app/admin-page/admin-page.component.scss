@@ -2,12 +2,14 @@ body {
     background-color: gray;
 }
 .btn-primary{
+    margin-top: 10px;
     width: 200px;
     height: 50px;
     font-size: 20px;
-    font-family: serif;
+    font-family:'Roboto', sans-serif;
     border-radius: 25px;
     float: centre;
+    font-weight:bolder;
 }
 .container {
     background-position: absolute;
@@ -19,6 +21,32 @@ body {
     padding-right: 50px;
     width: 400px;
     height: 400px;
-    margin-top: 10%;
+    margin-top: 20%;
     border-radius: 30px;
+}
+#background-video {
+    border: solid 1px black;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+.allign{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 35px;
+    margin-top: 150px;
+}
+
+.middle{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 35px;
+    margin-top: 80px;
 }

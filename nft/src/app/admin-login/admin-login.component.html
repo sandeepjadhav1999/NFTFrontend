@@ -3,83 +3,36 @@
     <source src="assets/video/comp.webm" type="video/webm">
   </video>
   <div class="row">
-    <div class="col-lg-12"><h1 class="top"><b>COLLABERA®</b></h1></div>
+    <div class="col-lg-12">
+      <div><a href="" style="color: white; text-decoration:none ;"><h1 class="top" style="font-weight:1200px; margin-left: 13px;"><b>COLLABERA®</b></h1></a></div>
+    </div>
   </div>
   <div class="row">
     <div class="col-lg-6">
       <div><img src="assets/logo.png" alt="" style="margin-top: 100px; width:100% ; height: 100%; margin-left: 50px;"></div>
     </div>
     <div class="col-lg-6">
-      <!-- <form style="background-color:transparent ;">
-        <div class="row" style="margin-top: 100px;">
-          <div class="col-lg-6 col-xl-5 col-md-9 mx-auto">
+      <div id="wrapper">
+        <div id="left">
+          <div id="signin">
+            <div class="logo">
+              <div><h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;"><b> Welcome Admin</b></h4></div>
+            </div>
+            <form>
+              <div>
+                <label>User Name</label>
+                <input type="text" placeholder="User Name" name="userName" class="text-input" [(ngModel)]="login.userName"/>
+              </div>
+              <div>
+                <label>Password</label>
+                <input type="password" placeholder="Password" class="text-input" name="password"  [(ngModel)]="login.password" />
+              </div>
+              <a [routerLink]="['/','createAccount']"><div style="text-align: center ; color:white ;">Create New Account</div></a>
+              <button type="submit" class="primary-btn mt-2" (click)="onLogin()" style="font-family:  'Roboto', sans-serif; font-weight: bolder;">Login</button>
+            </form>
           </div>
         </div>
-        <div class="card" style="width:600px; margin-top: 150px;" >
-          <div class="card-header" style="background-color: rgb(3, 3, 58);" >
-            <h3 class="text-center text-white">Welcome Admin</h3>
-          </div>
-          <div class="card-body">
-            <div class="form-group form-row">
-              <label for="UserName" class="col-md-4 col-form-label">Username</label>
-              <div class="col-md-8">
-                <input type="text" class="form-control" placeholder="Username" name="UserName" [(ngModel)]="login.userName"  autofocus="autofocus">
-              </div>
-            </div>
-        
-            <div class="form-group form-row">
-              <label for="Password" class="col-md-4 col-form-label">Password</label>
-              <div class="col-md-8">
-                <input type="password" class="form-control" placeholder="Password"name="Password" [(ngModel)]="login.password" >
-              </div>
-            </div>
-        
-          </div>
-        
-          <div class="card-footer">
-            <div>
-                <a [routerLink]="['/','createAccount']">Create New Account</a><span class="float-right"><button (click)="onLogin()" class="btn btn-primary">Login</button></span>
-            </div>
-          </div>
-        </div> 
-      </form> -->
-
-      
-<div id="wrapper">
-  <div id="left">
-    <div id="signin">
-      <div class="logo">
-        <div><h4 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white;"><b> Welcome Admin</b></h4></div>
-       </div>
-       <form>
-         <div>
-          <label>User Name</label>
-          <input type="text" placeholder="User Name" name="userName" class="text-input" [(ngModel)]="login.userName"/>
-         </div>
-         <div>
-           <label>Password</label>
-           <input type="password" placeholder="Password" class="text-input" name="password"  [(ngModel)]="login.password" />
-         </div>
-          <a [routerLink]="['/','createAccount']"><div style="text-align: center ; color:white ;">Create New Account</div></a>
-          <button type="submit" class="primary-btn mt-2" (click)="onLogin()">Login</button>
-        </form>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </div>
 
     </div>
   </div>

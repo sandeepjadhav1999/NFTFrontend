@@ -10,6 +10,7 @@ import { IssueNftService } from '../issue-nfts.service';
 })
 export class IssueNftComponent implements OnInit {
   issueNftFrom: FormGroup | any = null;
+  level:any=["Level 1","Level 2","Level 3","Level 4", "Level 5"]
 
   constructor(private issueNftService:IssueNftService, private router: Router) { }
 

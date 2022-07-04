@@ -9,6 +9,8 @@ import { IssueNftService } from '../issue-nfts.service';
   styleUrls: ['./validate-nft.component.scss']
 })
 export class ValidateNftComponent implements OnInit {
+
+  level:any=["Level 1","Level 2","Level 3","Level 4", "Level 5"]
   result:any
   validateNft: FormGroup | any = null;
 
@@ -40,7 +42,7 @@ export class ValidateNftComponent implements OnInit {
         console.log(response.result)
         if (response.result == "valid"){
           this.result = response.result
-          this.validateNft.reset()
+          this.validateNft.reset() 
           this.validateNft.get('userName').clearValidators();
           this.validateNft.get('userName').updateValueAndValidity();
           this.validateNft.get('fName').clearValidators();
@@ -59,6 +61,7 @@ export class ValidateNftComponent implements OnInit {
           this.validateNft.get('url').updateValueAndValidity();
           this.validateNft.get('nftId').clearValidators();
           this.validateNft.get('nftId').updateValueAndValidity();
+          
         }
         else {
           this.result=response.result

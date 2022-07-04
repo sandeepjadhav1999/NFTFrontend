@@ -1,49 +1,17 @@
-<h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center mt-3">All NFTs Details</h1>
+
+
+<h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center text-white mt-5">All NFTs Details</h1>
 <div class="col-xl-12 mx-auto">
     <div class="row">
-        <!-- <div class="col-md-4" *ngFor="let nfts of nfts; let i = index">
-            <div class="card card-primary">
-                <div class="card-header text-center">
-                    <h5>{{nfts.nftOwner}}</h5>
-                </div>
-                <div class="card-body">
-                    <table class="table table-borderless">
-                        <tr>
-                            <th>First Name:</th>
-                            <td>{{nfts.fName}}</td>
-                        </tr>
-                        <tr>
-                            <th>Last Name:</th>
-                            <td>{{nfts.lName}}</td>
-                        </tr>
-                        <tr>
-                            <th>Course Name:</th>
-                            <td>{{nfts.courseName}}</td>
-                        </tr>
-                        <tr>
-                            <th>NFT ID:</th>
-                            <td>{{nfts.nftId}}</td>
-                        </tr>
-                        <tr>
-                            <th>NFT URl:</th>
-                            <td>{{nfts.nftURL}}</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="card-footer">
-                    <button class="btn btn-info" data-toggle="modal" data-target="#viewModal" (click)="onViewClick($event, i)">View More</button>&nbsp;    
-                </div>
-            </div>
-        </div> -->
         <div class="col-8 mx-auto mt-5">
-            <table class="table ">
-              <thead>
+            <table class="table text-white ">
+              <thead >
                 <th style="text-align: center ;">NFT Owner</th>
                 <th style="text-align: center ;">First Name</th>
                 <th style="text-align: center ;">Last Name</th>
                 <th style="text-align: center ;">Course Name</th>
-                <th style="text-align: center ;">NFT ID</th>
                 <th style="text-align: center ;">NFT URL</th>
+                <th style="text-align: center ;">NFT ID</th>
                 <th style="text-align: center ;">Action</th>
               </thead>
               <tbody>
@@ -52,7 +20,7 @@
                   <td>{{ nfts.fName }}</td>
                   <td>{{ nfts.lName }}</td>
                   <td>{{ nfts.circleName }}</td>
-                  <td><a href="{{ nfts.nftURL }}" target="_blank" style="text-decoration: none; color: black;"><div class="change">{{ nfts.nftURL }}</div></a></td>
+                  <td><a href="{{ nfts.nftURL }}" target="_blank" style="text-decoration: none; color: white;"><div class="change">{{ nfts.nftURL }}</div></a></td>
                   <td>{{ nfts.nftId }}</td>
                   
                   <td>
@@ -76,8 +44,8 @@
     <div class="modal" role="dialog" id="viewModal">
       <div class="modal-dialog">
         <div class="modal-content" style="width: 700px">
-          <div class="modal-header bg-primary">
-            <div class="modal-title" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: large;">VIEW NFT</div>
+          <div class="modal-header " style="background-color: #0355a8 ;" >
+            <div class="modal-title" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: large; margin-left: 300px;">VIEW NFT</div>
             <button type="button" class="close" data-dismiss="modal">
               <span>&times;</span>
             </button>
@@ -85,7 +53,7 @@
           <div class="modal-body">
             <div class="form-group row">
               <label for="txtViewNftaeskey" class="col-sm-4 col-form-label"
-                >aesKey</label
+                >aesKey :</label
               >
               <div class="col-sm-8">
                 <input
@@ -102,7 +70,7 @@
             </div>
             <div class="form-group row">
                 <label for="txtViewNftcircleName" class="col-sm-4 col-form-label"
-                  >Circle Name</label
+                  >Circle Name :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -119,7 +87,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftdocType" class="col-sm-4 col-form-label"
-                  >DocType</label
+                  >DocType :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -136,7 +104,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftemailId" class="col-sm-4 col-form-label"
-                  >Email ID</label
+                  >Email ID :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -153,7 +121,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftexpiryDate" class="col-sm-4 col-form-label"
-                  >Expiry Date</label
+                  >Expiry Date :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -170,7 +138,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftfName" class="col-sm-4 col-form-label"
-                  >First Name</label
+                  >First Name :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -187,7 +155,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftitemCpyNum" class="col-sm-4 col-form-label"
-                  >Item Copy Number</label
+                  >Item Copy Number :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -204,7 +172,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftitemID" class="col-sm-4 col-form-label"
-                  >Item ID</label
+                  >Item ID :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -221,7 +189,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftlName" class="col-sm-4 col-form-label"
-                  >Last Name</label
+                  >Last Name :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -238,7 +206,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftmasteryLevel" class="col-sm-4 col-form-label"
-                  >Mastery Level</label
+                  >Mastery Level :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -255,7 +223,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftname" class="col-sm-4 col-form-label"
-                  >Purpose</label
+                  >Purpose :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -272,7 +240,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftId" class="col-sm-4 col-form-label"
-                  >NFT ID</label
+                  >NFT ID :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -289,7 +257,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftOwner" class="col-sm-4 col-form-label"
-                  >NFT Owner</label
+                  >NFT Owner :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -306,7 +274,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftStatus" class="col-sm-4 col-form-label"
-                  >NFT Status</label
+                  >NFT Status :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -323,7 +291,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftnftURL" class="col-sm-4 col-form-label"
-                  >NFT URL</label
+                  >NFT URL :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -340,7 +308,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftowner" class="col-sm-4 col-form-label"
-                  >Issued By</label
+                  >Issued By :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -357,7 +325,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftprice" class="col-sm-4 col-form-label"
-                  >Price</label
+                  >Price :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -374,7 +342,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftsymbol" class="col-sm-4 col-form-label"
-                  >Symbol</label
+                  >Symbol :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -391,7 +359,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNfttimeStamp" class="col-sm-4 col-form-label"
-                  >Timestamp</label
+                  >Timestamp :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -408,7 +376,7 @@
               </div>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-warning" data-dismiss="modal">Close</button>
+            <button class="btn btn-warning" data-dismiss="modal" style="font-family: 'Roboto', sans-serif;">Close</button>
           </div>
         </div>
       </div>
@@ -419,5 +387,5 @@
 
 
 <div class="mx-auto" style="width:200px; margin-top: 50px;">
-    <button class="btn btn-warning "(click)="back()" style="width:200px ;">Back</button>
+    <button class="btn btn-warning "(click)="back()" style="width:200px ; font-family: 'Roboto', sans-serif;">Back</button>
 </div>
