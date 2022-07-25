@@ -1,5 +1,5 @@
 <div class="scroll">
-    <div class="row mt-4">
+    <div class="row mt-5">
         <div class="col-md-8 col-xl-6 mx-auto ">
             <form [formGroup]="validateNft">
                 <div class="card mt-1 border-0" id="scroll">
@@ -46,37 +46,15 @@
                                 <span class="text-danger" *ngIf="validateNft.get('circleName').invalid && (validateNft.get('circleName').dirty || validateNft.get('circleName').touched || validateNft.submitted) && validateNft.get('circleName').errors?.required">Circle name can't be blank</span>
                             </div>
                         </div>
-    
-
-
-
-
-    
                         <div class="form-group form-row">
                             <label for="masteryLevel" class="col-md-4 col-form-label">Mastery Level :</label>
                             <div class="col-md-8">
-                                <select name="masteryLevel" id="masteryLevel" class="form-control" formControlName="masteryLevel">
+                                <select name="masteryLevel" id="masteryLevel" class="form-control" (change)="imgselect()" formControlName="masteryLevel">
                                     <option value="null">-- Select --</option>
                                     <option *ngFor="let level of level" [value]="level">{{level}}</option>
                                 </select>
                             </div>
                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         <!-- <div class="form-group form-row">
                             <label for="expiryDate" class="col-md-4 col-form-label">Expiry Date :</label>
                             <div class="col-md-8">
@@ -123,8 +101,10 @@
                 </div>     
           </form>
         </div>
-    </div>
-    
+        <div class="col-md-8 col-xl-4 mx-auto">
+            <img src="{{imgs}}" class="pop" alt="" width="60%" style="margin-top: 100px; margin-left: 50px;">
+        </div>
+    </div>    
     <form >
         <div class="modal" role="dialog" id="viewModal">
           <div class="modal-dialog  modal-dialog-centered ">

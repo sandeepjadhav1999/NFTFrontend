@@ -14,6 +14,8 @@ export class ValidateNftComponent implements OnInit {
   result:any
   validateNft: FormGroup | any = null;
 
+  imgs:any
+
   constructor(private issueNftService:IssueNftService, private router: Router) { }
 
   ngOnInit(){
@@ -80,5 +82,31 @@ export class ValidateNftComponent implements OnInit {
   onBack(){
     this.router.navigate(['/','external','externalOperation'])
   }
+
+  imgselect(){
+    if(this.validateNft.value.masteryLevel === "Level 1"){
+      this.imgs="assets/Exp.png"
+      console.log(this.imgs)
+    }
+    else if(this.validateNft.value.masteryLevel === "Level 2"){
+      this.imgs="assets/Data.png"
+      console.log(this.imgs)
+    }
+    else if(this.validateNft.value.masteryLevel === "Level 3"){
+      this.imgs="assets/Quality.png"
+      console.log(this.imgs)
+    }
+    else if(this.validateNft.value.masteryLevel === "Level 4"){
+      this.imgs="assets/Platform.png"
+      console.log(this.imgs)
+    }
+    else{
+      this.imgs="assets/Cloud.png"
+      console.log(this.imgs)
+    }
+
+    
+  }
+
 
 }

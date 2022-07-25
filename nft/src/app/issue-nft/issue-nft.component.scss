@@ -10,11 +10,17 @@
     bottom: 0;
     z-index: -1;
     background-color:#010f1d ;
-    overflow-y:visible;
+    overflow-y:hidden;
     overflow-x: hidden;
     padding-bottom: 50px;
+
   }
 .scroll {
   max-height: 1000px;
   overflow-y: auto;
+}
+
+.pop:hover{
+    transform: scale(1.5);
+    transition: transform .5s;
 }

@@ -11,6 +11,7 @@ import { IssueNftService } from '../issue-nfts.service';
 export class IssueNftComponent implements OnInit {
   issueNftFrom: FormGroup | any = null;
   level:any=["Level 1","Level 2","Level 3","Level 4", "Level 5"]
+  imgs:any=""
 
   constructor(private issueNftService:IssueNftService, private router: Router) { }
 
@@ -25,6 +26,10 @@ export class IssueNftComponent implements OnInit {
       emailId: new FormControl(null, [ Validators.required ]),
       url: new FormControl(null, [ Validators.required ]),
     });    
+  }
+
+  onBack(){
+    this.router.navigate(['/','admin','adminoperation'])
   }
 
   onIssueNftClick(event:any)
@@ -44,6 +49,31 @@ export class IssueNftComponent implements OnInit {
     {
       console.log(this.issueNftFrom.errors);
     }
+  }
+
+  imgselect(){
+    if(this.issueNftFrom.value.masteryLevel === "Level 1"){
+      this.imgs="assets/Exp.png"
+      console.log(this.imgs)
+    }
+    else if(this.issueNftFrom.value.masteryLevel === "Level 2"){
+      this.imgs="assets/Data.png"
+      console.log(this.imgs)
+    }
+    else if(this.issueNftFrom.value.masteryLevel === "Level 3"){
+      this.imgs="assets/Quality.png"
+      console.log(this.imgs)
+    }
+    else if(this.issueNftFrom.value.masteryLevel === "Level 4"){
+      this.imgs="assets/Platform.png"
+      console.log(this.imgs)
+    }
+    else{
+      this.imgs="assets/Cloud.png"
+      console.log(this.imgs)
+    }
+
+    
   }
 
 }
