@@ -12,7 +12,9 @@
                 <th style="text-align: center ;">Course Name</th>
                 <th style="text-align: center ;">NFT URL</th>
                 <th style="text-align: center ;">NFT ID</th>
+                <th style="text-align: center ;">NFT Status</th>
                 <th style="text-align: center ;">Action</th>
+                <th style="text-align: center ;">Expire</th>
               </thead>
               <tbody>
                 <tr *ngFor="let nfts of nfts; let i = index">
@@ -22,9 +24,10 @@
                   <td>{{ nfts.circleName }}</td>
                   <td><a href="{{ nfts.nftURL }}" target="_blank" style="text-decoration: none; color: white;"><div class="change">{{ nfts.nftURL }}</div></a></td>
                   <td>{{ nfts.nftId }}</td>
-                  
-                  <td>
+                  <td>{{nfts.nftStatus}}</td>
+                  <td >
                     <button
+                      style="min-width: 103px;"
                       class="btn btn-info"
                       (click)="onViewClick($event, i)"
                       data-toggle="modal"
@@ -33,6 +36,7 @@
                       View More
                     </button>
                   </td>
+                  <td ><button class="btn btn-warning" (click)="expireNft($event,i)">Expire</button></td>
                 </tr>
               </tbody>
             </table>
@@ -42,10 +46,10 @@
 
 <form>
     <div class="modal" role="dialog" id="viewModal">
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content" style="width: 700px">
-          <div class="modal-header " style="background-color: #0355a8 ;" >
-            <div class="modal-title" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: large; margin-left: 300px;">VIEW NFT</div>
+          <div class="modal-header" style="background-color: #0355a8 ;" >
+            <div class="modal-title" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: large;"><h5>VIEW NFT</h5></div>
             <button type="button" class="close" style="background-color: blue;" data-dismiss="modal">
               <span>&times;</span>
             </button>

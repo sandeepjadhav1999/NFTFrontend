@@ -15,12 +15,14 @@ export class AllNftComponent implements OnInit {
   constructor(private issueNftServe:IssueNftService, private route:Router) { }
 
   ngOnInit() {
-    this.issueNftServe.getAllProjects().subscribe((response: any) => {
-      this.nfts = [];
-      response.map((obj: any) => {
-        this.nfts = this.nfts.concat(obj.nfts);
-        console.log(this.nfts)
-      });
+    this.issueNftServe.getAllProjects().subscribe((response: IssueNfts[]) => {
+      // this.nfts = [];
+      // response.map((obj: any) => {
+      //   this.nfts = this.nfts.concat(obj.nfts);
+      //   console.log(this.nfts)
+      // });
+      this.nfts=response
+      console.log(this.nfts)
     });
   }
 
@@ -49,8 +51,18 @@ export class AllNftComponent implements OnInit {
     this.viewNft.symbol=this.nfts[index].symbol
     this.viewNft.timeStamp=this.nfts[index].timeStamp
   }
-    
-    
-  
 
+  expireNft(event:any, index:number){
+    var exp=this.nfts[index]
+    let final= {nftId:exp.nftId}
+    this.issueNftServe.expireNft(final).subscribe((res)=>{
+      if(res.result === "success"){
+        this.issueNftServe.getAllProjects().subscribe((response: IssueNfts[]) => {
+          this.nfts=response
+      console.log(this.nfts)
+    });
+      }
+    })
+  }
+    
 }

@@ -26,8 +26,12 @@ export class IssueNftService {
   }
   validateNft(newProject: IssueNfts): Observable<IssueNfts>
   {
-    return this.httpClient.post<IssueNfts>(this.urlPrefix + "/nft/validateNFT", newProject)
-    
+    return this.httpClient.post<IssueNfts>(this.urlPrefix + "/nft/validateNFT", newProject)  
+  }
+
+  expireNft(expireNft:any): Observable<IssueNfts>
+  {
+    return this.httpClient.post<IssueNfts>(this.urlPrefix + "/nft/expireNft", expireNft)  
   }
   
 }

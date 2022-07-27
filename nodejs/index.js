@@ -77,3 +77,28 @@ app.post("/nft/validateNFT", function (req, res) {
   );
   res.send(helpers.toCamel({"result": "valid"}));
 });
+
+app.post("/nft/expireNft", function (req, res) {
+  console.log(req.method, req.url, req.body);
+  nft = JSON.parse(fs.readFileSync(jsonfile)).nft;
+  nft = nft.map((nft) =>{
+    if(nft.nftId === req.body.nftId){
+      console.log(nft.nftStatus)
+      nft.nftStatus= "EXPIRED"
+      console.log(nft.nftStatus)
+    }
+    return nft
+  })
+  console.log("Response: ",nft );
+  fs.writeFileSync(
+    jsonfile,
+    JSON.stringify({
+      ...JSON.parse(fs.readFileSync(jsonfile)),
+      nft: nft,
+    }),
+    "utf8"
+  );
+  res.send(helpers.toCamel({
+    "result": "success"}));
+  
+});
