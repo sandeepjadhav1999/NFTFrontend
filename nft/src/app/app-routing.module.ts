@@ -6,6 +6,7 @@ import { AllNftComponent } from './all-nft/all-nft.component';
 import { CreatAccountAdminComponent } from './creat-account-admin/creat-account-admin.component';
 import { ExternalLoginComponent } from './external-login/external-login.component';
 import { ExternalPageComponent } from './external-page/external-page.component';
+import { HistoryNftComponent } from './history-nft/history-nft.component';
 import { HomeComponent } from './home/home.component';
 import { IssueNftComponent } from './issue-nft/issue-nft.component';
 import { NftDetails1Component } from './nft-details1/nft-details1.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
     {path:"adminoperation",component:AdminPageComponent},
     {path:"issueNft", component:IssueNftComponent},
     {path:"allNft",component:AllNftComponent},
+    {path:"history/:nftId", component:HistoryNftComponent}
   ]},
   {path:"user", children:[
     {path:"userLogin",component:UserLoginComponent},

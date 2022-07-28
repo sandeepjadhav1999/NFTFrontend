@@ -41,6 +41,7 @@ export class IssueNftComponent implements OnInit {
       console.log(this.issueNftFrom.value)
       this.issueNftService.insertProject(this.issueNftFrom.value).subscribe(() => {
         this.router.navigate( ['/',"nftDetails1",this.issueNftFrom.value.userName ]); 
+        alert("hi")
       }, (error) => {                
         console.log(error); 
       });

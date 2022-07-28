@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IssueNfts } from '../issue-nfts';
 import { IssueNftService } from '../issue-nfts.service';
+import * as $ from 'jquery'
 
 @Component({
   selector: 'app-all-nft',
@@ -11,6 +12,8 @@ import { IssueNftService } from '../issue-nfts.service';
 export class AllNftComponent implements OnInit {
   nfts:IssueNfts[]=[]
   viewNft: IssueNfts = new IssueNfts();
+  historyNft:IssueNfts[]=[]
+  final:any
 
   constructor(private issueNftServe:IssueNftService, private route:Router) { }
 
@@ -23,13 +26,16 @@ export class AllNftComponent implements OnInit {
       // });
       this.nfts=response
       console.log(this.nfts)
+      
     });
   }
 
   back(){
     this.route.navigate(['/',"admin","adminoperation"])
   }
+  
 
+  
   onViewClick(event: any, index: number){
     this.viewNft.aesKey=this.nfts[index].aesKey
     this.viewNft.circleName=this.nfts[index].circleName
@@ -50,16 +56,25 @@ export class AllNftComponent implements OnInit {
     this.viewNft.price=this.nfts[index].price
     this.viewNft.symbol=this.nfts[index].symbol
     this.viewNft.timeStamp=this.nfts[index].timeStamp
+
+    if(this.viewNft.nftStatus === "EXPIRED"){
+      this.route.navigate(['/','admin','history',this.viewNft.nftId])
+    }
   }
 
-  expireNft(event:any, index:number){
+  confirm(event:any, index:number){
     var exp=this.nfts[index]
-    let final= {nftId:exp.nftId}
-    this.issueNftServe.expireNft(final).subscribe((res)=>{
+    this.final= {nftId:exp.nftId}
+    console.log(this.final)
+  }
+
+  expireNft(){
+    this.issueNftServe.expireNft(this.final).subscribe((res)=>{
       if(res.result === "success"){
         this.issueNftServe.getAllProjects().subscribe((response: IssueNfts[]) => {
           this.nfts=response
       console.log(this.nfts)
+      $("#expireModal").trigger("click");
     });
       }
     })

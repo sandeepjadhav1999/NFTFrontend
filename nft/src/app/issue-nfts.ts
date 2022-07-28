@@ -19,6 +19,11 @@ export class IssueNfts {
     symbol: any
     timeStamp:any
     result:any
+    nft:any
+    TxId:any
+    TxVersion:any
+    Value:any
+    Timestamp:any
     constructor(){
         this.aesKey=null
         this.circleName=null
@@ -40,5 +45,10 @@ export class IssueNfts {
         this.symbol=null
         this.timeStamp=null   
         this.result=null
+        this.nft=null
+        this.TxId=null
+        this.TxVersion=null
+        this.Value=null
+        this.Timestamp=null
     }
 }

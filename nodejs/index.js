@@ -61,6 +61,16 @@ app.get("/nft/retrieveAllNFTSForUser/:nftOwner",function (req,res){
 
 })
 
+app.get("/nft/history/:nftId",function (req,res){
+  console.log(req.method, req.url);
+  console.log(req.params);
+  nft = JSON.parse(fs.readFileSync(jsonfile, "utf8")).history;
+  console.log("Response: ", nft);
+  res.send(nft);
+})
+
+
+
 
 app.post("/nft/validateNFT", function (req, res) {
   console.log(req.method, req.url);
