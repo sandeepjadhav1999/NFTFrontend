@@ -22,7 +22,7 @@ export class IssueNftService {
   }
   getuserbyuserName(firstName:IssueNfts):Observable<IssueNfts>
   {
-    return this.httpClient.get<IssueNfts>(this.urlPrefix+"/nft/retrieveAllNFTSForUser/"+firstName,{responseType:"json"})
+    return this.httpClient.get<IssueNfts>(this.urlPrefix+"/nft/getNftsByUser/"+firstName,{responseType:"json"})
   }
 
   getHistorybynftId(nftId:IssueNfts):Observable<IssueNfts>
@@ -32,7 +32,7 @@ export class IssueNftService {
   
   validateNft(newProject: IssueNfts): Observable<IssueNfts>
   {
-    return this.httpClient.post<IssueNfts>(this.urlPrefix + "/nft/validateNFT", newProject)  
+    return this.httpClient.post<IssueNfts>(this.urlPrefix + "/nft/validateNft", newProject)  
   }
 
   expireNft(expireNft:any): Observable<IssueNfts>

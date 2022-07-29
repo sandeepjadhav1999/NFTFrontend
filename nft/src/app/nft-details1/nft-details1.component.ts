@@ -24,13 +24,13 @@ export class NftDetails1Component implements OnInit {
     })
 
     this.issueNftService.getuserbyuserName(this.inftOwner).subscribe((response: any) => {
-      this.nfts = [];
-      console.log(response)
-      response.map((obj: any) => {
-        this.nfts = this.nfts.concat(obj.nfts);
-        console.log(this.nfts);
-      });
-      // this.nfts=response
+      // this.nfts = [];
+      // console.log(response)
+      // response.map((obj: any) => {
+      //   this.nfts = this.nfts.concat(obj.nfts);
+      //   console.log(this.nfts);
+      // });
+      this.nfts=response
       // console.log(this.nfts)
 
     });

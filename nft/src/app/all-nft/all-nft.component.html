@@ -36,7 +36,7 @@
                       View More
                     </button>
                   </td>
-                  <td ><button class="btn btn-warning" data-toggle="modal"
+                  <td ><button *ngIf="nfts.nftStatus === 'ISSUED'" class="btn btn-danger" data-toggle="modal"
                     data-target="#expireModal" (click)="confirm($event,i)"  [disabled]="nfts.nftStatus ==='EXPIRED'">Expire</button></td>
                 </tr>
               </tbody>

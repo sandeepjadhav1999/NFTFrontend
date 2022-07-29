@@ -19,11 +19,12 @@ export class UserNftComponent implements OnInit {
     console.log(this.userName)
 
     this.userNft.getuserbyuserName(this.userName).subscribe((response: any) => {
-      this.nfts = [];
-      response.map((obj: any) => {
-        this.nfts = this.nfts.concat(obj.nfts);
-        console.log(this.nfts)
-      });
+      // this.nfts = [];
+      // response.map((obj: any) => {
+      //   this.nfts = this.nfts.concat(obj.nfts);
+      //   console.log(this.nfts)
+      // });
+      this.nfts=response
       console.log(response)
     });
   }

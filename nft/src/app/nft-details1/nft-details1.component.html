@@ -9,8 +9,8 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Circle Name</th>
-                
                 <th>NFT Url</th>
+                <th>NFT Status</th>
                 <!-- <th>Action</th> -->
               </thead>
               <tbody>
@@ -34,6 +34,7 @@
                       View More
                     </button>
                   </td> -->
+                  <td>{{nfts.nftStatus}}</td>
                 </tr>
               </tbody>
             </table>
@@ -45,7 +46,7 @@
 
 <form>
   <div class="modal" role="dialog" id="viewModal">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content" style="width: 700px">
         <div class="modal-header" style="background-color: #0355a8;">
           <div class="modal-title" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size:larger; margin-left: 300px;">VIEW NFT</div>
