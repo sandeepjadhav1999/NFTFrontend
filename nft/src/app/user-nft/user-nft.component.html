@@ -11,6 +11,7 @@
                 <th>Cirlce Name</th>
                 <th>NFT URL</th>
                 <th>NFT Status</th>
+                <th>History</th>
               </thead>
               <tbody>
                 <tr *ngFor="let nfts of nfts; let i = index">
@@ -25,6 +26,7 @@
                 <td>{{ nfts.circleName }}</td>  
                 <td><a href="{{ nfts.nftURL }}" target="_blank" style="color: white; text-decoration: none;"><div class="change">{{ nfts.nftURL }}</div></a></td> 
                 <td>{{nfts.nftStatus}}</td> 
+                <td><button class="btn btn-secondary" (click)="history()"> History</button></td>
                 </tr>
               </tbody>
             </table>
