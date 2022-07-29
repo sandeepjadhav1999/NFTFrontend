@@ -6,7 +6,6 @@
             <table class="table text-white">
               <thead style="text-align: center;" >
                 <tr>
-                    <th >Tx Id</th>
                     <th>Tx Version</th>
                     <th>NFT ID</th>
                     <th>NFT Owner</th>
@@ -20,7 +19,6 @@
               </thead>
               <tbody>
                 <tr *ngFor="let nfts of historyNft">
-                    <td>{{nfts.TxId}}</td>
                     <td>{{nfts.TxVersion}}</td>
                     <td>{{nfts.Value.nftId}}</td>
                     <td>{{nfts.Value.nftOwner}}</td>

@@ -93,10 +93,9 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <button class="btn float-right text-white" style="background-color:#0355a8 ;" (click)="onIssueNftClick($event)" >Issue NFT</button>
+                            <button class="btn float-right text-white" style="background-color:#0355a8 ;" (click)="onIssueNftClick($event)" data-toggle="modal" data-target="#exampleModal">Issue NFT</button>
                         </div>
-                    </div>
-                     
+                    </div>     
               </form>
             </div>
         </div>
@@ -108,6 +107,25 @@
         <button class="btn btn-warning "(click)="onBack()" style="width:200px ; font-family: 'Roboto', sans-serif;">Back</button>
     </div>
 </div>
+
+<div class="modal" id="exampleModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="modal-title" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; font-size: large;"><h5>Conformation</h5></div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          NFT has been created successfully
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="confirm()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

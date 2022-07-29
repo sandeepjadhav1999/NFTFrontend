@@ -39,9 +39,8 @@ export class IssueNftComponent implements OnInit {
     if (this.issueNftFrom.valid)          
     {
       console.log(this.issueNftFrom.value)
-      this.issueNftService.insertProject(this.issueNftFrom.value).subscribe(() => {
-        this.router.navigate( ['/',"nftDetails1",this.issueNftFrom.value.userName ]); 
-        alert("hi")
+      this.issueNftService.insertProject(this.issueNftFrom.value).subscribe((res) => {
+        console.log(res)
       }, (error) => {                
         console.log(error); 
       });
@@ -50,6 +49,11 @@ export class IssueNftComponent implements OnInit {
     {
       console.log(this.issueNftFrom.errors);
     }
+  }
+
+
+  confirm(){
+    this.router.navigate( ['/',"nftDetails1",this.issueNftFrom.value.userName ]); 
   }
 
   imgselect(){
