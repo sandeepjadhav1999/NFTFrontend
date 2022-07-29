@@ -123,7 +123,7 @@
                     id="txtViewNftexpiryDate"
                     style="width: 300px"
                     class="form-control-plain-text"
-                    placeholder="expiryDate"
+                    placeholder=" "
                     name="expiryDate"
                     [(ngModel)]="viewNft.expiryDate"
                     disabled="disabled"
@@ -183,7 +183,7 @@
               </div>
               <div class="form-group row">
                 <label for="txtViewNftname" class="col-sm-4 col-form-label"
-                  >Purpose :</label
+                  >Name :</label
                 >
                 <div class="col-sm-8">
                   <input
@@ -296,6 +296,23 @@
                     placeholder="timeStamp"
                     name="timeStamp"
                     [(ngModel)]="viewNft.timeStamp"
+                    disabled="disabled"
+                  />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="txtViewNfttSymbol" class="col-sm-4 col-form-label"
+                  >Symbol :</label
+                >
+                <div class="col-sm-8">
+                  <input
+                    type="text"
+                    id="txtViewNftSymbol"
+                    style="width: 300px"
+                    class="form-control-plain-text"
+                    placeholder="symbol"
+                    name="symbol"
+                    [(ngModel)]="viewNft.symbol"
                     disabled="disabled"
                   />
                 </div>
