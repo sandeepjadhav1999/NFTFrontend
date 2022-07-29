@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { IssueNfts } from '../issue-nfts';
 import { IssueNftService } from '../issue-nfts.service';
 
+
 @Component({
   selector: 'app-user-history',
   templateUrl: './user-history.component.html',

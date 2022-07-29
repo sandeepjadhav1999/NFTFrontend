@@ -38,7 +38,7 @@ import { UserHistoryComponent } from './user-history/user-history.component';
     ExternalLoginComponent,
     ValidateNftComponent,
     HistoryNftComponent,
-    UserHistoryComponent
+    UserHistoryComponent,
   ],
   imports: [
     BrowserModule,
