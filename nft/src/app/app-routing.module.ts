@@ -28,7 +28,8 @@ const routes: Routes = [
   {path:"user", children:[
     {path:"userLogin",component:UserLoginComponent},
     {path:"userOperation",component:UserPageComponent},
-    {path:"userNft", component:UserNftComponent}
+    {path:"userNft", component:UserNftComponent},
+    {path:"history/:nftId", component:HistoryNftComponent}
   ]},
   {path:"createAccount", component:CreatAccountAdminComponent},
   {path:"nftDetails1/:nftOwner",component:NftDetails1Component},
