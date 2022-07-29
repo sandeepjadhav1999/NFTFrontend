@@ -26,7 +26,7 @@
                 <td>{{ nfts.circleName }}</td>  
                 <td><a href="{{ nfts.nftURL }}" target="_blank" style="color: white; text-decoration: none;"><div class="change">{{ nfts.nftURL }}</div></a></td> 
                 <td>{{nfts.nftStatus}}</td> 
-                <td><button class="btn btn-secondary" (click)="history()"> History</button></td>
+                <td><button *ngIf="nfts.nftStatus === 'EXPIRED'" class="btn btn-secondary" (click)="history($event, i)"> History</button></td>
                 </tr>
               </tbody>
             </table>

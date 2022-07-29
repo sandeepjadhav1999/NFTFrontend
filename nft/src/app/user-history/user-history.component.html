@@ -1,0 +1,40 @@
+<h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-center text-white mt-5">NFT History</h1>
+
+<div class="col-xl-12 mx-auto">
+    <div class="row">
+        <div class="col-11 mx-auto mt-5">
+            <table class="table text-white">
+              <thead style="text-align: center;" >
+                <tr>
+                    <th>Tx Version</th>
+                    <th>NFT ID</th>
+                    <th>NFT Owner</th>
+                    <th>Course Name</th>
+                    <th>Mastery Level</th>
+
+                    <th>Expiry Date</th>
+                    <th>NFT Status</th>
+                    <th>Timestamp</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let nfts of historyNft">
+                    <td>{{nfts.TxVersion}}</td>
+                    <td>{{nfts.Value.nftId}}</td>
+                    <td>{{nfts.Value.nftOwner}}</td>
+                    <td>{{nfts.Value.circleName}}</td>
+                    <td>{{nfts.Value.masteryLevel}}</td>
+                    <td>{{nfts.Value.expiryDate}}</td>
+                    <td>{{nfts.Value.nftStatus}}</td>
+                    <td>{{nfts.Timestamp}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+
+
+<div class="mx-auto" style="width:200px; margin-top: 50px;">
+    <button class="btn btn-warning "(click)="back()" style="width:200px ; font-family: 'Roboto', sans-serif;">Back</button>
+</div>

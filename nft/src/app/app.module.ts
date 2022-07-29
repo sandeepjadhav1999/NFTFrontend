@@ -19,6 +19,7 @@ import { ExternalPageComponent } from './external-page/external-page.component';
 import { ExternalLoginComponent } from './external-login/external-login.component';
 import { ValidateNftComponent } from './validate-nft/validate-nft.component';
 import { HistoryNftComponent } from './history-nft/history-nft.component';
+import { UserHistoryComponent } from './user-history/user-history.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HistoryNftComponent } from './history-nft/history-nft.component';
     ExternalPageComponent,
     ExternalLoginComponent,
     ValidateNftComponent,
-    HistoryNftComponent
+    HistoryNftComponent,
+    UserHistoryComponent
   ],
   imports: [
     BrowserModule,

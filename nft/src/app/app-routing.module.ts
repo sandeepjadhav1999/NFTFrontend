@@ -10,6 +10,7 @@ import { HistoryNftComponent } from './history-nft/history-nft.component';
 import { HomeComponent } from './home/home.component';
 import { IssueNftComponent } from './issue-nft/issue-nft.component';
 import { NftDetails1Component } from './nft-details1/nft-details1.component';
+import { UserHistoryComponent } from './user-history/user-history.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserNftComponent } from './user-nft/user-nft.component';
 import { UserPageComponent } from './user-page/user-page.component';
@@ -29,7 +30,7 @@ const routes: Routes = [
     {path:"userLogin",component:UserLoginComponent},
     {path:"userOperation",component:UserPageComponent},
     {path:"userNft", component:UserNftComponent},
-    {path:"history/:nftId", component:HistoryNftComponent}
+    {path:"userhistory/:nftId", component:UserHistoryComponent}
   ]},
   {path:"createAccount", component:CreatAccountAdminComponent},
   {path:"nftDetails1/:nftOwner",component:NftDetails1Component},

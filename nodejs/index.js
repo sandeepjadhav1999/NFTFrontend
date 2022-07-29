@@ -44,21 +44,12 @@ app.post("/nft/issueNFT", function (req, res) {
 });
 
 //GET nft/retrieveAllNFTSForUser/:nftOwner
-app.get("/nft/retrieveAllNFTSForUser/:nftOwner",function (req,res){
+app.get("/nft/getNftsByUser/:nftOwner",function (req,res){
   console.log(req.method, req.url);
   console.log(req.params);
-  nft = JSON.parse(fs.readFileSync(jsonfile, "utf8")).nft;
-  nfts = JSON.parse(fs.readFileSync(jsonfile, "utf8")).nft;
-  nft=nft.find((nft)=>{
-    nft=nft.nfts
-    nft=nft[0]['userName']
-    if(nft==req.params.nftOwner ){
-      return nft
-    }
-  })
-  console.log("Response: ", nfts);
-  res.send(helpers.toCamel(nfts));
-
+  nft = JSON.parse(fs.readFileSync(jsonfile, "utf8")).single;
+  console.log("Response: ", nft);
+  res.send(nft);
 })
 
 app.get("/nft/history/:nftId",function (req,res){

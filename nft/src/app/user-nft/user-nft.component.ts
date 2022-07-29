@@ -56,9 +56,12 @@ export class UserNftComponent implements OnInit {
     
   }
 
-  history(){
-    if(this.viewNft.nftStatus === "EXPIRED"){
-      this.route.navigate(['/','user','history',this.viewNft.nftId])
+  history(event: any, index: number){
+    var status = this.nfts[index].nftStatus
+    var id =this.nfts[index].nftId
+
+    if(status === "EXPIRED"){
+      this.route.navigate(['/','user','userhistory',id])
     }
   }
 
